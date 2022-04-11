@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>EDITOR JSON</title>
+    <link href="vendor/css/tabulator.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="vendor/css/bootstrap.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="src/img/fav.png" />
+    <script src="vendor/js/jquery-3.5.1.min.js"></script>
+    <script src="script/websocket.js"></script>
+</head>
+
+<body>
+    <header
+        class="d-flex flex-md-row align-items-center justify-content-between p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <div class="mar">
+            <h5 class="my-0 mr-md-auto font-weight-normal">Лого Фирмы</h5>
+        </div>
+        <div id="two" class="d-flex flex-row justify-content-center mt-4 col">
+            <button type="button" class="btn btn-primary w-25" id="load-json-one">
+                Редактировать
+            </button>
+            <button type="button" class="btn btn-primary w-25" id="reset">
+                Очистить
+            </button>
+            <button type="button" class="btn btn-primary w-25" id="send">
+                Отправить
+            </button>
+            <button type="button" class="btn btn-secondary w-25 " id="zoom">
+                Zoom
+            </button>
+
+        </div>
+        <div class="mr-5"><img id="changeSize" class="monitor img-fluid" src="./img/i (1).webp" /></div>
+        <div>
+            <h1 class="font-weight-normal">EDITOR JSON</h1>
+        </div>
+    </header>
+    <section class="d-flex flex-row mt-1 w-100 justify-content-between">
+
+        <div class="conteiner col" id="holder-load">
+            <h5 class="">JSON</h5>
+            <textarea id="result" class="form-control resize" rows="15" cols="30"></textarea>
+        </div>
+        <div class="conteiner col" id="holder-result">
+            <h5 class="">Ответ от сервера</h5>
+            <textarea id="show-resalt" class="form-control resize" rows="15"></textarea>
+        </div>
+    </section>
+    <div class="overlay d-none  " id="popup">
+        <form id="form" class="col w-75 d-flexalign-content-center justify-content-center flex-column ml-auto mr-auto">
+            <div class="d-flex align-content-center justify-content-center">
+                <textarea id="show-zoom" class="form-control mt-5 resize" rows="30"></textarea>
+            </div>
+            <div id="zoom-buttons" class="d-flex flex-row justify-content-center mt-4 col flex-row">
+                <button type="button" class="btn btn-primary w-25" id="load-json">
+                    Форматировать
+                </button>
+                <button type="button" class="btn btn-primary" id="reset-zoom">
+                    Очистить
+                </button>
+                <button type="button" class="btn btn-primary" id="send-zoom">
+                    Отправить
+                </button>
+                <button type="button" class="btn btn-primary" id="save">
+                    Сохранить
+                </button>
+                <button type="button" class="btn btn-primary" id="close">
+                    Закрыть
+                </button>
+        </form>
+        <div class="overlay d-none" id="popup-save">
+            <form class="form-control shadow w-25 h-25 d-flex align-items-center justify-content-center flex-column">
+                <h5 class="">Хотите сохранить изменения?</h5>
+                <div class="mt-1">
+                    <button type="button" class="btn btn-primary" id="yes">
+                        Да
+                    </button>
+                    <button type="button" class="btn btn-primary" id="no">
+                        Нет
+                    </button>
+                </div>
+                <div class="mr-5"><img id="form-close" class="monitor close img-fluid" src="./img/х.jpg" /></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./script/editor.js"></script>
+</body>
+
+</html>
