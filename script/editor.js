@@ -29,47 +29,6 @@ const random = getRandom();
 const PageName = "MongoQuery_db" +`${random}`;
 let a ='"';
 
-// Заменяет одинарные кавычки на двойные
-// str.replace(/'/g, '"')
-
-
-// Функция проверки и добавления кавычек
-function checkQuotes() {
-    let split = textArea.value.split("");
-   let arrrayfrom = Object.entries(textArea.value)
-   debug(arrrayfrom)
-    let array =[];
-
-// //     for (key in textArea.value) {
-// //  array.push(key);
-
-// //       }
-// //       debug(`${array.length}-----array`);
-  
-
-    for (let i =0;i<split.length;i++){
-        if( split[i] === "\""){
-array.push(split[i]);
-        }
-    }
-    debug(`${array.length}-----array`);
-    if(array.length% 2 == 0) {
-        debug("кавычек хватает")} else {
-            debug("кавечек не хватает")
-        } 
-// for (let i =0;i<split.length;i++){
-//     if( split[i] === "{" || split[i] === "}"){
-// array.push(split[i]);
-//     }
-// }
-// debug(`${array.length}-----array`);
-// debug(`${array}-----array`);
-// if(array.length% 2 == 0) {
-//     debug("скобок хватает")} else {
-//         debug("скобок не хватает")
-//     } 
-
-}
 
 // Функция генерации случайного числа
 function getRandom() {
